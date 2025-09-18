@@ -61,6 +61,9 @@ print(result.final_output)
 
 (_For Jupyter notebook users, see [hello_world_jupyter.ipynb](examples/basic/hello_world_jupyter.ipynb)_)
 
+> [!TIP]
+> Want to exercise the agent loop without an API key? Pass `RunConfig(model=ManualModel())` when calling `Runner.run` or `Runner.run_sync`. The runner prints the current context (system prompt, conversation history, tools, and handoffs) and waits for you to type the next assistant response.
+
 ## Handoffs example
 
 ```python
