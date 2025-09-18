@@ -50,7 +50,7 @@ Runner は次のループを実行します。
 
 `run_config` パラメーターで、エージェント実行のグローバル設定を構成できます。
 
--   [`model`][agents.run.RunConfig.model]: 各 Agent の `model` 設定に関わらず、使用するグローバルな LLM モデルを設定します。
+-   [`model`][agents.run.RunConfig.model]: 各 Agent の `model` 設定に関わらず、使用するグローバルな LLM モデルを設定します。API を呼び出さずに手動で応答を入力したい場合は、`agents` から `ManualModel()` を渡すとコンテキストが表示され、次の応答を入力するまで待機します（例: `RunConfig(model=ManualModel())`）。
 -   [`model_provider`][agents.run.RunConfig.model_provider]: モデル名を解決するモデルプロバイダーで、既定は OpenAI です。
 -   [`model_settings`][agents.run.RunConfig.model_settings]: エージェント固有の設定を上書きします。例: グローバルな `temperature` や `top_p` を設定できます。
 -   [`input_guardrails`][agents.run.RunConfig.input_guardrails], [`output_guardrails`][agents.run.RunConfig.output_guardrails]: すべての実行に含める入力/出力 ガードレール のリストです。

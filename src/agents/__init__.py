@@ -49,6 +49,7 @@ from .lifecycle import AgentHooks, RunHooks
 from .memory import OpenAIConversationsSession, Session, SessionABC, SQLiteSession
 from .model_settings import ModelSettings
 from .models.interface import Model, ModelProvider, ModelTracing
+from .models.manual import ManualModel, manual_prompt_interaction
 from .models.multi_provider import MultiProvider
 from .models.openai_chatcompletions import OpenAIChatCompletionsModel
 from .models.openai_provider import OpenAIProvider
@@ -175,6 +176,8 @@ __all__ = [
     "Runner",
     "run_demo_loop",
     "Model",
+    "ManualModel",
+    "manual_prompt_interaction",
     "ModelProvider",
     "ModelTracing",
     "ModelSettings",
